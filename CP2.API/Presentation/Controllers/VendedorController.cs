@@ -34,6 +34,7 @@ namespace CP2.API.Presentation.Controllers
 
 
         [HttpGet("{id}")]
+        [SwaggerOperation(Summary = "Obtém um vendedor específico", Description = "Este endpoint retorna os detalhes de um vendedor específico, encontrado com base no ID fornecido.")]
         [Produces<VendedorEntity>]
         public IActionResult GetPorId(int id)
         {
@@ -47,6 +48,7 @@ namespace CP2.API.Presentation.Controllers
 
 
         [HttpPost]
+        [SwaggerOperation(Summary = "Cadastra um novo vendedor", Description = "Este endpoint cria um novo vendedor com base nas informações fornecidas.")]
         [Produces<VendedorEntity>]
         public IActionResult Post([FromBody] VendedorDto entity)
         {
@@ -70,6 +72,7 @@ namespace CP2.API.Presentation.Controllers
         }
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Altera os dados de um vendedor específico", Description = "Este endpoint altera os dados de um vendedor específico, encontrado com base no ID fornecido.")]
         [Produces<VendedorEntity>]
         public IActionResult Put(int id, [FromBody] VendedorDto entity)
         {
@@ -94,6 +97,7 @@ namespace CP2.API.Presentation.Controllers
 
 
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Deleta um vendedor específico", Description = "Este endpoint deleta um vendedor específico, encontrado com base no ID fornecido.")]
         [Produces<VendedorEntity>]
         public IActionResult Delete(int id)
         {
